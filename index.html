@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border: 5px solid #BADA55;
+        }
+
+        </style>
+</head>
+<body>
+<canvas width="400" height="400" >Truc qui doit s'afficher</canvas>
+<script>
+    //selectionner notre canvas
+    const canvas= document.querySelector("canvas");
+        //donner un contexte
+    const ctx=canvas.getContext("2d");
+    //designer un carre
+    //qu'on le met dans parenthese s'appele directement dans browser
+    (function  draw() {
+        //appeler le contexte
+        ctx.fillStyle= "#BADA55";
+        //creer un rectangle
+        ctx.fillRect(100, 100, 50, 50);
+
+    })();
+    function  drawCircle() {
+        ctx.fillStyle="red";
+        ctx.beginPath();
+        ctx.arc(40, 40, 25, 0, Math.PI * 2, false);
+        ctx.fill();
+
+
+    }
+
+    </script>
+
+</body>
+</html>
